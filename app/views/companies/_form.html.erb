@@ -17,7 +17,15 @@
   </div>
 
   <%= f.fields_for :employees do |builder| %>
-  <%= render "employees_fields", :f => builder %>
+      <div class="field">
+        <%= builder.label :name %>
+        <%= builder.text_field :name %>
+        <%= builder.label :_destroy, "Remove Employee" %>
+        <%= builder.check_box :_destroy %>
+      </div>
+
+
+  <%# render "employees_fields", :f => builder %>
   <% end %>
 
 

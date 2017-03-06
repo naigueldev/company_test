@@ -5,5 +5,11 @@
   <%= @company.name %>
 </p>
 
+<% @company.employees.each do |employee| %>
+<p>
+  <strong>Employee Name:</strong>
+  <td><%= employee.name %></td>
+</p>
+<% end %>
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
