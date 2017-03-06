@@ -16,19 +16,18 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
-    employee = @company.employees.build
+    @company.employees.build
   end
 
   # GET /companies/1/edit
   def edit
-    employee = @company.employees.build
+    @company.employees.build
   end
 
   # POST /companies
   # POST /companies.json
   def create
     @company = Company.new(company_params)
-
     respond_to do |format|
       if @company.save
         format.html { redirect_to @company, notice: 'Company was successfully created.' }

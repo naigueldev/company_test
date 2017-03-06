@@ -4,12 +4,13 @@
   <strong>Name:</strong>
   <%= @company.name %>
 </p>
-
-<% @company.employees.each do |employee| %>
-<p>
-  <strong>Employee Name:</strong>
-  <td><%= employee.name %></td>
-</p>
+<% if @company.employees.any? %>
+    <% @company.employees.each do |employee| %>
+      <p>
+        <strong>Employee Name:</strong>
+        <td><%= employee.name %></td>
+      </p>
+    <% end %>
 <% end %>
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

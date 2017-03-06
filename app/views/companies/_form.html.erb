@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label "Nome Empresa" %>
     <%= f.text_field :name %>
   </div>
 
   <%= f.fields_for :employees do |builder| %>
-      <div class="field">
-        <%= builder.label :name %>
-        <%= builder.text_field :name %>
-        <%= builder.label :_destroy, "Remove Employee" %>
-        <%= builder.check_box :_destroy %>
-      </div>
+  <div class="field">
+    <%= builder.label "Nome Empregado"%>
+    <%= builder.text_field :name %>
+    <%= builder.label :_destroy, "Remove Employee" %>
+    <%= builder.check_box :_destroy %>
+  </div>
 
 
   <%# render "employees_fields", :f => builder %>
