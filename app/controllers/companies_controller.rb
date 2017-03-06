@@ -10,7 +10,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    employee = @company.employees.build
+    # employee = @company.employees.build
   end
 
   # GET /companies/new
@@ -21,7 +21,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
-    # employee = @company.employees.build
+    employee = @company.employees.build
   end
 
   # POST /companies
